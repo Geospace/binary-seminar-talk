@@ -1,0 +1,194 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Binary Seminar</title>
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/solarized.css">
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <script>
+var link = document.createElement( 'link' );
+link.rel = 'stylesheet';
+link.type = 'text/css';
+link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+        <section>
+          <h2>Sécurité des binaires ELF</h2>
+          <h4>Outils et méthodologie</h4>
+        </section>
+
+        <section>
+          <section>
+            <h3>omg c'est qui ? pourquoi on est là ?</h3>
+          </section>
+          <section>
+            <img src="img/lucas.jpg" alt="" width="45%"/>
+          </section>
+          <section>
+            <img src="img/hacker.jpg" alt="" width="100%"/>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h3>Que faire face à un binaire ?</h3>
+          </section>
+          <section>
+            <h3>Se poser les bonnes questions !</h3>
+          </section>
+          <section>
+            <ul>
+              <li>Rétro ingénierie ?</li>
+              <li>Exploitation ?</li>
+              <li>Environnement ?</li>
+              <li>Plateforme ?</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Analyse statique du binaire</h3>
+          </section>
+          <section>
+            <ul>
+              <li>Strings, grep...</li>
+              <li>nm, objdump...</li>
+              <li>Héditeur hexadécimal</li>
+              <li>readelf</li>
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h3>Désassemblage</h3>
+          </section>
+          <section>
+            <img src="img/disas.jpg" alt=""/>
+          </section>
+          <section>
+            <ul>
+              <li>Bases en assembleur</li>
+              <li>Se fixer des objectifs</li>
+              <li>Tout documenter</li>
+              <li>Réécrire le code</li>
+            </ul>
+          </section>
+          <section>
+            <ul>
+              <li>Objdump</li>
+              <li>GDB</li>
+              <li>Radare</li>
+              <li>Hopper</li>
+              <li>IDA Pro</li>
+              <li>Hex-Rays (F5 gg ez)</li>
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h3>Analyse dynamique</h3>
+          </section>
+          <section>
+            <img src="img/debug.jpg" alt=""/>
+          </section>
+          <section>
+            <ul>
+              <li>GDB</li>
+              <li>GDB</li>
+              <li>GDB</li>
+            </ul>
+          </section>
+          <section>
+            <h1>PEDA</h1>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h3>Exploitation de vulnérabilités</h3>
+          </section>
+          <section>
+            <h3>Schéma d'exploitation</h3>
+          </section>
+          <section>
+            <ul>
+              <li>Repérer cible</li>
+              <li>Trouver faille dans cible</li>
+              <li>Profiter faille dans cible</li>
+              <li>omg profit</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Bien apprendre son cours</h3>
+          </section>
+          <section>
+            <ul>
+              <li>Buffer/Stack overflow (Bof/SBBof)</li>
+              <li>Heap overflow (hof)</li>
+              <li>Format string (fmtstr)</li>
+            </ul>
+          </section>
+          <section>
+            <h3>"Ca c'est l'effet demo..." -- Aymeric Fouchault</h3>
+          </section>
+          <section>
+            <ul>
+              <li>Si ça crash, c'est au calme</li>
+              <li>Si c'est arbitraire, ça ne doit pas le rester</li>
+              <li>Faire du sale, c'est pas mal (et ça rime)</li>
+              <li>Prévoir large</li>
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h3>Quelques ressources !</h3>
+          </section>
+          <section>
+            <ul>
+              <li>Zenk-Security</li>
+              <li>IRC</li>
+              <li>CTFTime</li>
+              <li>Equipes HUB</li>
+              <li>Lire des livres</li>
+            </ul>
+          </section>
+
+          <section>
+            <ul>
+              <li>geographer@geographer.fr</li>
+              <li>faut que je rouvre un blog</li>
+              <li>@aulitdbg</li>
+              <li>fr0g t'as perdu</li>
+            </ul>
+          </section>
+        </section>
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+    <script>
+Reveal.initialize({
+  dependencies: [
+    { src: 'plugin/markdown/marked.js' },
+    { src: 'plugin/markdown/markdown.js' },
+    { src: 'plugin/notes/notes.js', async: true },
+    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+  ],
+  transition: "zoom"
+});
+    </script>
+  </body>
+</html>
